@@ -47,11 +47,11 @@
   <!-- data get from server side api  -->
   <div class="row mt-5">
     <div class="col-12 col-sm-6 col-md-3" *ngFor="let item of paytmData">
-      <div class="card" >
-        <img class="card-img-top" [src]="item?.image_url" alt="Card image cap">
+      <div class="card"  *ngIf="item">
+        <img class="card-img-top" [src]="item?.image_url || 'assets/images/ledtv.jpg'" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Product Name: {{item?.name}}</h5>
-          <h5 class="card-title">Offer Price: {{item?.offer_price}}</h5>
+          <h5 class="card-title">Product Name: {{item?.name || 'N/A'}}</h5>
+          <h5 class="card-title">Offer Price: {{item?.offer_price || '0'}}</h5>
           <a href="#" class="btn btn-primary">Add to cart</a>
         </div>
       </div>
