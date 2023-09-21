@@ -1,49 +1,23 @@
 <div class="container">
-<div class="row">
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="assets/images/ledtv.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">lED tV</h5>
-              <h5 class="card-title">$100</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-          </div>
+  <div class="row">
+    <div class="col-md-3" *ngFor="let item of grid_layout">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" [src]="item?.image_url" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Product Name: {{item?.name}}</h5>
+          <h5 class="card-title">Product Brand : {{item?.brand}}</h5>
+          <h5 class="card-title">Actual Price: {{item?.actual_price}}</h5>
+          <h5 class="card-title">Offer Price: {{item?.offer_price}}</h5>
+          <h5 class="card-title">Product Id: {{item?.product_id}}</h5>
+          <h5 class="card-title">Category Id: {{item?.category_id}}</h5>
+          <h5 class="card-title">Brand Id: {{item?.brand_id}}</h5>
+          <h5 class="card-title">Discount: {{item?.discount}}%</h5>
+          <h5 class="card-title">Stock : {{item?.stock}}</h5>
+          <h5 class="card-title">Min Quantity : {{item?.min_quantity}}</h5>
+          <h5 class="card-title">Max Quantity : {{item?.max_quantity}}</h5>
+          <a href="#" class="btn btn-primary">Add to cart</a>
+        </div>
+      </div>
     </div>
-
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="assets/images/ledtv.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">lED tV</h5>
-              <h5 class="card-title">$100</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-          </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="assets/images/ledtv.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">lED tV</h5>
-              <h5 class="card-title">$100</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-          </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="assets/images/ledtv.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">lED tV</h5>
-              <h5 class="card-title">$100</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-          </div>
-    </div>
-</div>
+  </div>
 </div>
