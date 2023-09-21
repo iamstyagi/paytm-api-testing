@@ -1,0 +1,8 @@
+{
+    "/paytmapi": {
+      "target": "https://search.paytm.com",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }
+  
